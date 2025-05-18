@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
   Bell, 
@@ -26,7 +27,6 @@ const TopNavBar = () => {
   const { currentUser, logout } = useAuth();
   const [searchFocused, setSearchFocused] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
   
   const handleLogout = async () => {
     try {
@@ -35,7 +35,6 @@ const TopNavBar = () => {
         title: "Logged out",
         description: "You have been successfully logged out",
       });
-      navigate("/");
     } catch (error) {
       toast({
         title: "Error",
@@ -132,7 +131,7 @@ const TopNavBar = () => {
         
         {/* Tab navigation */}
         <div className="flex space-x-1 overflow-x-auto pb-2 hide-scrollbar">
-          {["Resume Analysis", "Job Match", "Smart Suggestions", "Resume Builder", "Job Search"].map((tab, i) => (
+          {[].map((tab, i) => (
             <Button
               key={i}
               variant={i === 0 ? "default" : "ghost"}

@@ -11,7 +11,6 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import LoadingScreen from "./components/LoadingScreen";
-
 const queryClient = new QueryClient();
 
 const App = () => {
