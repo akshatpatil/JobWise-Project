@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 20% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 20% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 58% 82%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 260 20% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 260 20% 25%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 20%;
+    --input: 260 20% 20%;
+    --ring: 260 58% 75%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-lilac/20 selection:text-white;
+  }
+
+  body {
+    @apply bg-charcoal text-foreground font-inter antialiased;
+    background: linear-gradient(to bottom right, #1A1A1A, #242424);
+  }
+
+  h1, h2, h3 {
+    @apply font-clash tracking-tight;
+  }
+
+  h4, h5, h6 {
+    @apply font-space tracking-normal;
+  }
+
+  .glass {
+    @apply bg-gradient-glass backdrop-blur-lg border border-white/10 shadow-glass;
+  }
+
+  .glass-hover {
+    @apply hover:border-lilac/20 hover:shadow-glass-hover transition-all duration-300;
+  }
+  
+  .glass-active {
+    @apply border-lilac/30 shadow-glass-active;
+  }
+
+  /* Fixed text gradient class - this was causing the purple boxes */
+  .text-gradient {
+    background: linear-gradient(135deg, #B9A6FF 0%, #9A84FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .lilac-glow {
+    box-shadow: 0 0 15px rgba(185, 166, 255, 0.5);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .txt-clip {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(185, 166, 255, 0.3);
+  }
+}
+
+.parallax-container {
+  perspective: 1000px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.letter-animation {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.letter-animation:nth-child(1) { animation-delay: 0.1s; }
+.letter-animation:nth-child(2) { animation-delay: 0.15s; }
+.letter-animation:nth-child(3) { animation-delay: 0.2s; }
+.letter-animation:nth-child(4) { animation-delay: 0.25s; }
+.letter-animation:nth-child(5) { animation-delay: 0.3s; }
+.letter-animation:nth-child(6) { animation-delay: 0.35s; }
+.letter-animation:nth-child(7) { animation-delay: 0.4s; }
+.letter-animation:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes float-reverse {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(15px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-flow {
+  animation: gradient-flow 3s ease infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(185, 166, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(185, 166, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(185, 166, 255, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(185,166,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.bg-gradient-lilac {
+  background: linear-gradient(135deg, #B9A6FF 0%, #9b87f5 100%);
+}
+
+.bg-gradient-glass {
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
+.shadow-glass {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-glass-hover {
+  box-shadow: 0 8px 30px -2px rgba(0, 0, 0, 0.3), 0 0 10px rgba(185, 166, 255, 0.3);
+}
+
+.shadow-glass-active {
+  box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.3), 0 0 15px rgba(185, 166, 255, 0.4);
+}
