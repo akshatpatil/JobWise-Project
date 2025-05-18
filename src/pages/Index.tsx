@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -135,6 +134,20 @@ const Index = () => {
                     See Features
                   </Button>
                 </Link>
+                {/* New Button for Resume Upgrader */}
+                <a
+                  href="https://corefunctionality1.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full md:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-lilac hover:opacity-90 transition-opacity text-charcoal px-8 py-6 text-lg"
+                  >
+                    Try resume upgrader
+                  </Button>
+                </a>
               </div>
             </motion.div>
             
