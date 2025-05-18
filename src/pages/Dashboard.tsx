@@ -27,10 +27,7 @@ const BUTTONS = [
 		onClick: () =>
 			window.open("https://jobviewsearchresource.streamlit.app/", "_blank", "noopener,noreferrer"),
 	},
-	{
-		label: "Resume Builder",
-		onClick: () => {},
-	},
+	
 ];
 
 const Dashboard = () => {
@@ -69,7 +66,14 @@ const Dashboard = () => {
 								}}
 								whileTap={{ scale: 0.98 }}
 								transition={{ type: "spring", stiffness: 300, damping: 20 }}
-								className="flex justify-center w-full"
+								className={`flex justify-center w-full ${
+									btn.label === "Resource Finder" ? "md:justify-end" : ""
+								}`}
+								style={
+									btn.label === "Resource Finder"
+										? { marginLeft: "27rem" }
+										: undefined
+								}
 							>
 								<Button
 									onClick={btn.onClick}
@@ -91,6 +95,7 @@ const Dashboard = () => {
 									`}
 									style={{
 										letterSpacing: "0.04em",
+										...(btn.label === "Resource Finder" ? { marginRight: "2rem" } : {}),
 									}}
 								>
 									<span
