@@ -8,11 +8,11 @@
 ### *Where Design Meets Intelligence. Precision Meets Emotion.*
 
 <p align="center">
-  <a href="#-project-overview">Overview</a> •
-  <a href="#-key-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-ai-powered-systems">AI Systems</a> •
-  <a href="#-getting-started">Get Started</a>
+  <a href="#-project-overview">Overview</a> •
+  <a href="#-key-features">Features</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-ai-powered-systems">AI Systems</a> •
+  <a href="#-getting-started">Get Started</a>
 </p>
 
 ![Job Matching Dashboard](https://via.placeholder.com/800x400/8A2BE2/FFFFFF?text=JobWise+Dashboard)
@@ -44,7 +44,7 @@ All wrapped in a visually stunning interface designed to maximize both functiona
 
 ### 📊 NLP Resume Analyzer
 - **Deep Content Analysis**: Advanced NLP evaluates your resume against industry standards
-- **Visual Compatibility Maps**: See how well your profile matches specific job descriptions 
+- **Visual Compatibility Maps**: See how well your profile matches specific job descriptions
 - **Keyword Optimization**: Identify critical terms missing from your profile
 
 ### 🧠 Job Upskilling Resource Finder
@@ -111,27 +111,10 @@ Our sophisticated matching algorithm leverages:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/jobwise.git
+git clone [https://github.com/yourusername/jobwise.git](https://github.com/yourusername/jobwise.git)
 
 # Install dependencies
 npm install
 
 # Launch development server
 npm run dev
-```
-
-Visit `http://localhost:8080` in your browser to see JobWise in action!
-
-### Deployed Version
-
-Experience JobWise without installation: [JobWise Live Demo](https://jobwise.lovable.app/)
-
----
-
-<div align="center">
-
-## 🌈 Designed with passion. Built for success.
-
-[![Made with ❤️ by Team HackStreet]
-
-</div>
